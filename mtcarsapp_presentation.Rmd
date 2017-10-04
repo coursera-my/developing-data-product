@@ -1,0 +1,52 @@
+---
+title: "Developing Data Product Course Project"
+author: "Marsela Yulita"
+date: "October 4, 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+This presentation is part of peer-graded assignment of the Developing Data Product Course, held by Johns Hopkins University and Coursera. This peer assessed assignment has two parts. 
+
+- Create a Shiny application and deploy it on Rstudio's servers. 
+- Use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about the application.
+
+## The Mtcars Application
+
+This application based on dataset mtcars from R. The application can be access in [shinyapps](https://myulita.shinyapps.io/mtcarsapp/).
+
+This application allows users to input several car specification, to get a list of car model with gas cost calculation for daily distance traveled. This apps show the plots for a variation values of Horsepower and Weight compared with Gas Cost. with assumption gass price per gallon is US$ 2.55.
+
+The reason i chose mtcars dataset, just because mtcars dataset available and ready to use on R without any prior packages installation. So it will easy for everyone to reproduce this application.
+
+## Input - Output
+
+Users allows to update these variables:
+
+- Number of Cylinder
+- Transmission type
+- Daily Distance
+- Gross Horsepower
+- Weight
+
+The application outputs:
+
+- Data
+- Plot
+
+The source code for ui.R and sever.R files are available on the [Git Hub](https://github.com/coursera-my/developing-data-product).
+
+## The Data
+
+The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
+
+```{r cars, echo = TRUE}
+head(mtcars)
+```
+
+
